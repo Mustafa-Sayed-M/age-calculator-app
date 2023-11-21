@@ -1,0 +1,170 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+/* Variables */
+:root {
+    /* ### Colors: */
+    /* Primary */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    /* --------------------------------- */
+    /* ### Animations: */
+    /* # Transition */
+    --transition: ease-in-out 300ms
+}
+/* GLobal Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+a {
+    color: black;
+    text-decoration: none
+}
+ul {
+    list-style: none
+}
+/* Body & Html */
+html,
+body {
+    font-size: 22px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif
+}
+/* Transition */
+.app .calc form input,
+.app .calc form input:focus::placeholder,
+.app .calc form button {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition)
+}
+/* Start App */
+.app {
+    display: flex;
+    height: 100vh;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Off-white)
+}
+.app .calc {
+    padding: 40px;
+    max-width: 500px;
+    padding-right: 80px;
+    border-radius: 10px 10px 100px 10px;
+    background-color: var(--White);
+    -webkit-border-radius: 10px 10px 100px 10px;
+    -moz-border-radius: 10px 10px 100px 10px;
+    -ms-border-radius: 10px 10px 100px 10px;
+    -o-border-radius: 10px 10px 100px 10px
+}
+.app .calc form {
+    display: flex;
+    position: relative;
+    column-gap: 15px;
+    align-items: center
+}
+.app .calc form,
+hr {
+    margin-bottom: 30px
+}
+.app .calc form label {
+    display: block;
+    font-size: 14px;
+    color: var(--Smokey-grey);
+    margin-bottom: 5px;
+    text-transform: uppercase
+}
+.app .calc form input {
+    width: 90px;
+    padding: 10px 5px;
+    border: solid 1px var(--Light-grey);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    font-weight: bold
+}
+.app .calc form input:focus {
+    outline: none;
+    border-color: var(--Purple);
+}
+.app .calc form input:focus::placeholder {
+    opacity: 0;
+}
+.app .calc form button {
+    right: -60px;
+    bottom: -60px;
+    border: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    width: fit-content;
+    background-color: var(--Off-black);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%
+}
+.app .calc form button:hover {
+    background-color: var(--Purple)
+}
+.app .calc hr {
+    border-color: var(--Light-grey)
+}
+.app .calc .results span {
+    font-size: 2.6rem;
+}
+.app .calc .results span.num {
+    margin-right: 5px;
+    color: var(--Purple)
+}
+.app .calc .results span.text {
+    font-weight: bold;
+    font-style: italic;
+    color: var(--Off-black)
+}
+@media (max-width: 768px) {
+    .app .calc {
+        padding-right: 40px;
+    }
+    .app .calc form,
+    .app .calc hr {
+        margin-bottom: 50px;
+    }
+    .app .calc form input {
+        width: 70px;
+    }
+    .app .calc form button {
+        right: 0;
+        left: 50%;
+        bottom: -80px;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+    .app .calc .results span {
+        font-size: 1.4rem;
+    }
+}
+/* End App */

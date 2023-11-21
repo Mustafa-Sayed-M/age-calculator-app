@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="any">
+  
+  <title>Age calculator app</title>
+  <!-- Style Css File -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Start App -->
+  <div class="app">
+    <div class="calc">
+      <form method="get" onsubmit="calcAge(event)">
+        <div class="input">
+          <label for="day">Day</label>
+          <input required type="number" id="day" placeholder="dd">
+        </div>
+        <div class="input">
+          <label for="month">Month</label>
+          <input required type="number" id="month" placeholder="mm">
+        </div>
+        <div class="input">
+          <label for="year">Year</label>
+          <input required type="number" id="year" placeholder="yyyy">
+        </div>
+        <button type="submit">
+          <img src="assets/images/icon-arrow.svg" alt="Icon">
+        </button>
+      </form>
+      <hr>
+      <div class="results">
+        <div class="result-years">
+          <span class="num">__</span>
+          <span class="text">Years</span>
+        </div>
+        <div class="result-months">
+          <span class="num">__</span>
+          <span class="text">Months</span>
+        </div>
+        <div class="result-days">
+          <span class="num">__</span>
+          <span class="text">Days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End App -->
+  <!-- Script Js File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
